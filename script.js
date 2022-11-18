@@ -7,15 +7,23 @@ const createTask = (event) => {
     input.value = "";
     
     const list = document.querySelector('[data-list]');
+    
     const task = document.createElement('li');
     task.classList.add('card');
-    const content = `<div>
-                        ${checkComplete()}
-                        <span class="task">${value}</span>
-                    </div>
+
+    const taskContent = document.createElement('div');
+    taskContent.appendChild(checkComplete());
+
+    const titleTask = document.createElement('span');
+    titleTask.classList.add('task');
+    titleTask.innerText = value;
+    taskContent.appendChild(titleTask);
+
+    const content = `                    
                     <i class="fas fa-trash-alt trashIcon icon"></i>`;
-    task.innerHTML = content;
-    console.log(task);
+    // task.innerHTML = content;
+    task.appendChild(taskContent);
+    console.log(content);
 
     list.appendChild(task);
 
