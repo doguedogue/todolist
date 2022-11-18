@@ -38,6 +38,10 @@ const checkComplete = () => {
     return i;
 };
 
-const completeTask = () => {
-    console.log("Complete task");
+const completeTask = (event) => {
+    console.log(event);
+    const element = event.target;
+    element.classList.add("fas");
+    element.classList.add("completeIcon");
+    element.classList.remove("far");    
 };
