@@ -34,5 +34,10 @@ btn.addEventListener('click', createTask);
 const checkComplete = () => {
     const i = document.createElement("i");
     i.classList.add("far", "fa-check-square", "icon");
+    i.addEventListener('click', completeTask);
     return i;
-}
+};
+
+const completeTask = () => {
+    console.log("Complete task");
+};
