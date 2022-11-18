@@ -39,9 +39,8 @@ const checkComplete = () => {
 };
 
 const completeTask = (event) => {
-    console.log(event);
     const element = event.target;
-    element.classList.add("fas");
-    element.classList.add("completeIcon");
-    element.classList.remove("far");    
+    element.classList.toggle("fas");
+    element.classList.toggle("completeIcon");
+    element.classList.toggle("far");    
 };
