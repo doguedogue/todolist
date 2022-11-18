@@ -20,7 +20,12 @@
   <body>
     <main>
       <div class="mainCard">
-        <div class="title"><img src="./assets/rocket.svg" /></div>
+        <div class="title">
+          <a href="https://github.com/hoodyth">
+            <img src="./assets/hoodyth.png" width="60px"/>
+          </a>
+          <img src="./assets/rocket.svg" />
+        </div>
         <div>
           <form action="">
             <input
@@ -29,8 +34,9 @@
               placeholder="Nombre de la tarea"
               class="inputForm"
               autocomplete="off"
+              data-form-input
             />
-            <button type="submit" class="btnCreate">
+            <button type="submit" class="btnCreate" data-form-btn>
               Agregar <i class="fas fa-plus-circle"></i>
             </button>
           </form>
@@ -53,5 +59,6 @@
         </ul>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
